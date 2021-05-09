@@ -1,4 +1,4 @@
-{% set version = '0.2.5' %}
+{% set version = "0.2.6" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,10 +11,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/duckdb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/duckdb/duckdb_{{ version }}.tar.gz
-  sha256: 13ba53b22dbcda041d57f3d15ec96eae5a98e8529a031e3b584629515dc51918
+  sha256: 5cf2af519f349b54f3e91f143214aece31febf8d96720d3b29cd2def49ae1584
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -50,9 +50,7 @@ test:
 about:
   home: https://duckdb.org/, https://github.com/cwida/duckdb
   license: MPL-2.0
-  summary: The DuckDB project is an embedded analytical data management system with support for
-    the Structured Query Language (SQL). This package includes all of DuckDB and a R
-    Database Interface (DBI) connector.
+  summary: The DuckDB project is an embedded analytical data management system with support for the Structured Query Language (SQL). This package includes all of DuckDB and a R Database Interface (DBI) connector.
   license_family: MOZILLA
   license_file: LICENSE
 
