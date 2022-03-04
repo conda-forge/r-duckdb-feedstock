@@ -1,4 +1,4 @@
-{% set version = "0.3.2" %}
+{% set version = "0.3.2-1" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/duckdb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/duckdb/duckdb_{{ version }}.tar.gz
-  sha256: 196bd81c5639863d6dc37407dd777fc107bcf3ee7d954253a8f5ce6a3be7a771
+  sha256: bacb278ded80e64aebd811f3c50eeca2d96a91cc88a5d534a74164ac08bf1ffc
 
 build:
   merge_build_host: true  # [win]
