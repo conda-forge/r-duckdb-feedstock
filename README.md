@@ -1,13 +1,15 @@
-About r-duckdb
-==============
-
-Home: https://duckdb.org/, https://github.com/cwida/duckdb
-
-Package license: MPL-2.0
+About r-duckdb-feedstock
+========================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-duckdb-feedstock/blob/main/LICENSE.txt)
 
+Home: https://duckdb.org
+
+Package license: MPL-2.0
+
 Summary: The DuckDB project is an embedded analytical data management system with support for the Structured Query Language (SQL). This package includes all of DuckDB and a R Database Interface (DBI) connector.
+
+Development: https://github.com/cwida/duckdb
 
 Current build status
 ====================
@@ -52,13 +54,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12655&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-duckdb-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.2" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12655&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-duckdb-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
