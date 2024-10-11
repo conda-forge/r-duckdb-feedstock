@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-duckdb-feedst
 
 Home: https://duckdb.org
 
-Package license: MPL-2.0
+Package license: MIT
 
 Summary: The DuckDB project is an embedded analytical data management system with support for the Structured Query Language (SQL). This package includes all of DuckDB and a R Database Interface (DBI) connector.
 
