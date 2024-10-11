@@ -51,9 +51,8 @@ test:
 about:
   home: https://duckdb.org
   dev_url: https://github.com/cwida/duckdb
-  license: MPL-2.0
+  license: MIT
   summary: The DuckDB project is an embedded analytical data management system with support for the Structured Query Language (SQL). This package includes all of DuckDB and a R Database Interface (DBI) connector.
-  license_family: MOZILLA
   license_file: LICENSE
 
 extra:
