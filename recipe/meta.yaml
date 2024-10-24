@@ -1,4 +1,4 @@
-{% set version = "1.0.0-1" %}
+{% set version = "1.1.1" %}
 
 {% set posix = 'm2-' if win else '' %}
 
@@ -10,12 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/duckdb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/duckdb/duckdb_{{ version }}.tar.gz
-  sha256: 987edcdcae91dcbc9d554f039425cd23b6e5787e7681f311c9966926744d4ca9
+  sha256: 7ac8ac701802df97459b39c0bb31e4d9e7c5684d4b600d6984f51cf181914c1b
 
 build:
   # Checking windows to see if it passes. Uncomment the line if it fails.
   # skip: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
