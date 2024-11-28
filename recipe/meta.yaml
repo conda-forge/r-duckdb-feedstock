@@ -1,5 +1,4 @@
-{% set version = "1.0.0-1" %}
-
+{% set version = "1.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -10,15 +9,17 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/duckdb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/duckdb/duckdb_{{ version }}.tar.gz
-  sha256: 987edcdcae91dcbc9d554f039425cd23b6e5787e7681f311c9966926744d4ca9
+  sha256: 1e14e39db3dc1c8b87ddd185c28deb4d11c3b073d3188852ab632339591c1825
 
 build:
-  # Checking windows to see if it passes. Uncomment the line if it fails.
-  # skip: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -34,11 +35,9 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
-
   host:
     - r-base
     - r-dbi
-
   run:
     - r-base
     - r-dbi
@@ -51,10 +50,12 @@ test:
 about:
   home: https://duckdb.org
   dev_url: https://github.com/cwida/duckdb
-  license: MPL-2.0
+  license: MIT
   summary: The DuckDB project is an embedded analytical data management system with support for the Structured Query Language (SQL). This package includes all of DuckDB and a R Database Interface (DBI) connector.
-  license_family: MOZILLA
-  license_file: LICENSE
+  license_family: MIT
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
+    - LICENSE
 
 extra:
   recipe-maintainers:
