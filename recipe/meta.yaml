@@ -12,7 +12,7 @@ source:
   sha256: 389ed95402eef15288f2a23020116de6331bebca8030c336d66481beb56edbf2
 
 build:
-  skip: true  # [win]
+  skip: true  # [not arm64]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -24,6 +24,8 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - r-dbi                        # [build_platform != target_platform]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
     - {{ compiler('c') }}          # [not win]
     - {{ stdlib("c") }}            # [not win]
