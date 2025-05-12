@@ -39,9 +39,13 @@ requirements:
   host:
     - r-base
     - r-dbi
+    - gcc_impl_osx_arm64  # [osx_arm64]
+    - gxx_impl_osx_arm64  # [osx_arm64]
   run:
     - r-base
     - r-dbi
+    - gcc_impl_osx_arm64  # [osx_arm64]
+    - gxx_impl_osx_arm64  # [osx_arm64]
 
 test:
   commands:
