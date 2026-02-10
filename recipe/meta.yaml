@@ -12,8 +12,7 @@ source:
   sha256: b4d7bf78babc267ee8490a12d2601d7be82782976c6c0a46b7d56b3ab61990c1
 
 build:
-  skip: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -36,6 +35,7 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - {{ posix }}xz                # [win]
   host:
     - r-base
     - r-dbi
