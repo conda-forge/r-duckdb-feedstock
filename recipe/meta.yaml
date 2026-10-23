@@ -1,4 +1,4 @@
-{% set version = "1.5.5" %}
+{% set version = "2.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/duckdb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/duckdb/duckdb_{{ version }}.tar.gz
-  sha256: 84b14fb3e1e55af6d2b6a75b0d4d18f80036894d1071cb8a9a870ba13329d3cd
+  sha256: 23db64ca8054c7984dba06958ae9d530579cb7430831ac4f503f33a44f013741
 
 build:
   skip: true  # [win]
